@@ -106,11 +106,29 @@ a:hover {
     }
 }
 
-.aboutMe{
-  background-color: #62676B;
-  text color: white;
-  padding: 18%;
+.aboutMe {
+    background-color: #62676B;
+    color: white;
+    padding: 18%;
+    animation: fadeInSlideUp 2s ease-out; /* Add animation */
 }
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;           /* Start transparent */
+        transform: translateY(50px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;           /* Fully visible */
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+.aboutMeHeader {
+    text-align: right;
+}
+
 .exp{
   background-color: #62676B;
   text color: white;
@@ -221,22 +239,20 @@ font-style: italic;
   background-color: #62676B;
   padding: 3% 0%;
   color:#E8E8E8;
+  border-bottom: 2px solid black;
+
 }
 .exp-euro{
   display: flex;
 }
-.aboutMeHeader{
-  text-align: right;
-}
-.me-img {
-    border-radius: 50%; /* Makes the image completely circular */
-    object-fit: cover;  /* Ensures the image covers the entire area within the rounded shape */
-}
+
+
 .edu{
   padding: 0% 0% 12% 0%;
   background-color: #2b3035;
   color: #E8E8E8;
 }
+
 
 .card{
   margin-left: 12%;
@@ -267,24 +283,44 @@ footer {
 
 @media (pointer:coarse) {
   h1{
-        font-size: 1rem !important;
+        font-size: 1.3rem !important;
   }
   h2{
     font-size: 1rem !important;
   }
   body{
         font-size: 0.7rem !important;
+        width: 100%;
   }
-  .icon{
-    width: 2.0rem;
-height: 2rem;
+  .aboutMe{
+    height: 80vh;
+    padding-top: 10rem;
   }
-.card{
-  margin: 10%;
-  background-color:#62676B !important;
-  color:#E8E8E8 !important;
-  width: 90% !important;
-}
+  .exp-euro {
+    height: 85vh;
+  }
+  .icon-container{
+    padding-top: 12vh;
+  }
+  .publication-content{
+    height: 80vh;
+    padding-top: 10rem;
+  }
+
+  .card {
+     margin: 1% auto;
+    background-color: #62676B !important;
+    color: #E8E8E8 !important;
+    width: 80% !important;
+    height: 2rem;
+  }
+
+  .contact-content{
+    height: 30vh;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+  }
+
 .edu-main{
   display:grid;
 }
