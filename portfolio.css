@@ -125,7 +125,7 @@ a:hover {
   font-family: serif;
   font-style: oblique;
   padding: 3%;
-  background-color: #2b3035;
+  background-color: #758080;
   color: #E8E8E8;
 }
 .item-lable{
@@ -149,7 +149,7 @@ font-style: italic;
   font-family: serif;
   font-style: oblique;
   padding: 3%;
-  background-color: #2b3035;
+  background-color: #758080;
   color: #E8E8E8;
 }
 
@@ -228,8 +228,12 @@ font-style: italic;
 .aboutMeHeader{
   text-align: right;
 }
+.me-img {
+    border-radius: 50%; /* Makes the image completely circular */
+    object-fit: cover;  /* Ensures the image covers the entire area within the rounded shape */
+}
 .edu{
-  padding: 12% 0%;
+  padding: 0% 0% 12% 0%;
   background-color: #2b3035;
   color: #E8E8E8;
 }
@@ -259,4 +263,29 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+@media (pointer:coarse) {
+  h1{
+        font-size: 1rem !important;
+  }
+  h2{
+    font-size: 1rem !important;
+  }
+  body{
+        font-size: 0.7rem !important;
+  }
+  .icon{
+    width: 2.0rem;
+height: 2rem;
+  }
+.card{
+  margin: 10%;
+  background-color:#62676B !important;
+  color:#E8E8E8 !important;
+  width: 90% !important;
+}
+.edu-main{
+  display:grid;
+}
 }
