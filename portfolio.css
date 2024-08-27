@@ -281,6 +281,10 @@ footer {
     bottom: 0;
 }
 
+.container {
+  width: 100%;
+}
+
 @media (pointer:coarse) {
   h1{
         font-size: 1.3rem !important;
@@ -297,7 +301,6 @@ footer {
     padding-top: 10rem;
   }
   .exp-euro {
-    height: 85vh;
   }
   .icon-container{
     padding-top: 12vh;
