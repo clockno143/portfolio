@@ -11,6 +11,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+
 }
 
 header h1 {
@@ -84,6 +85,7 @@ a:hover {
     display: flex;
     gap: 20px; /* Space between icons */
     margin-left: 0.5rem;
+    flex-wrap: wrap;
     animation: bounce 2s ease ; /* Apply animation */
 
 }
@@ -111,6 +113,28 @@ a:hover {
     color: white;
     padding: 18%;
     animation: fadeInSlideUp 2s ease-out; /* Add animation */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 40px; /* Distance from the bottom of the screen */
+    right: 40px; /* Distance from the right side of the screen */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    opacity: 0.7; /* Slight transparency */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+    opacity: 1; /* Fully opaque on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
 }
 
 /* Keyframes for fade-in and slide-up animation */
@@ -159,9 +183,24 @@ a:hover {
   background-color: #62676B;
   padding: 3%;
 font-style: italic;
-
+height: 80vh;
+padding-top: 10rem;
 
 }
+.icon-container-skill {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, black, #333); /* Black to dark gray gradient */
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+        margin: 5px;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
 .skill-lable {
   text-align: center;
   font-family: serif;
@@ -176,19 +215,16 @@ font-style: italic;
   background-color: #62676B;
   padding: 3%;
   font-style: italic;
-  position: relative;
   height: 400px; /* Adjust height as needed */
 }
 
 .skills-container {
   position: relative;
-  width: 300px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
+  flex-wrap: wrap;
   margin: 0 auto;
-  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   overflow: hidden;
 }
 
@@ -202,35 +238,25 @@ font-style: italic;
   transform-origin: center;
 }
 
-
-
-@keyframes revolve {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-skill {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px; /* Space between icon and label */
 }
 
-.skills-container {
-  animation: revolve 20s linear infinite;
+.label {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
 }
 
-.skill-item:nth-child(1) { transform: rotate(0deg) translateY(-130px) rotate(0deg); }
-.skill-item:nth-child(2) { transform: rotate(40deg) translateY(-130px) rotate(-40deg); }
-.skill-item:nth-child(3) { transform: rotate(80deg) translateY(-130px) rotate(-80deg); }
-.skill-item:nth-child(4) { transform: rotate(120deg) translateY(-130px) rotate(-120deg); }
-.skill-item:nth-child(5) { transform: rotate(160deg) translateY(-130px) rotate(-160deg); }
-.skill-item:nth-child(6) { transform: rotate(200deg) translateY(-130px) rotate(-200deg); }
-.skill-item:nth-child(7) { transform: rotate(240deg) translateY(-130px) rotate(-240deg); }
-.skill-item:nth-child(8) { transform: rotate(280deg) translateY(-130px) rotate(-280deg); }
-.skill-item:nth-child(9) { transform: rotate(320deg) translateY(-130px) rotate(-320deg); }
 
 
 .exp-euro-lab{
   width: 30%;
-  padding: 18% 0%;
+  padding: 20% 2%;
   background-color: #2b3035;
   color:#E8E8E8;
 }
@@ -287,15 +313,19 @@ footer {
 
 @media (pointer:coarse) {
   h1{
-        font-size: 1.3rem !important;
+        font-size: 1.0rem !important;
   }
   h2{
-    font-size: 1rem !important;
+    font-size: 0.85rem !important;
   }
   body{
         font-size: 0.7rem !important;
-        width: 100%;
   }
+  .icon{
+    width: 2rem;
+height: 2rem;
+  }
+
   .aboutMe{
     height: 80vh;
     padding-top: 10rem;
@@ -304,6 +334,7 @@ footer {
   }
   .icon-container{
     padding-top: 12vh;
+
   }
   .publication-content{
     height: 80vh;
